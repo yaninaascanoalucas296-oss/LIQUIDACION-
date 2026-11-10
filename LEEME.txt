@@ -1,0 +1,16 @@
+SANTRIX - ANEXO LOCAL (Laravel + SQLite)
+
+INSTALACION EN OTRA PC (Windows)
+1. Instalar PHP 8.2+ y Composer (o Laragon/XAMPP, que ya traen PHP).
+   Extensiones PHP necesarias: mbstring, openssl, pdo_sqlite, sqlite3, fileinfo, zip, xml, dom, gd, ctype, tokenizer, curl.
+2. Descomprimir esta carpeta donde quieras.
+3. Doble clic en  instalar.bat  (solo la primera vez, requiere internet).
+4. Doble clic en  iniciar.bat  -> abre http://127.0.0.1:8000
+
+DATOS
+- Toda la informacion esta en database\database.sqlite. Para respaldar, copia ese archivo.
+- Los estilos ya vienen compilados en public\build (no hace falta Node.js).
+
+LINUX / MAC
+  composer install --no-dev -o && cp .env.example .env && php artisan key:generate
+  php artisan migrate --force && php artisan serve
